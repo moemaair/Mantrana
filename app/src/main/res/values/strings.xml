@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Mantrana</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_welcome_screen">WelcomeScreen</string>
 </resources>
