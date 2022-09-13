@@ -2,4 +2,7 @@
     <string name="app_name">Mantrana</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="title_activity_welcome_screen">WelcomeScreen</string>
+    <string name="title_activity_another_screen">AnotherScreen</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_onboarding">onboarding</string>
 </resources>

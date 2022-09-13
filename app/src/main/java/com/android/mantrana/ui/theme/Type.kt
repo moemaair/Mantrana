@@ -21,12 +21,10 @@ val Inter = FontFamily(
 // Set of Material typography styles to start with
 val Typography = Typography(
     body1 = TextStyle(
-        color = Color.White,
         fontFamily = Inter,
         fontWeight = FontWeight.Normal,
         fontSize = 18.sp),
     h2 = TextStyle(
-        color = Color.White,
         fontFamily = Inter,
         fontWeight = FontWeight.Bold,
         fontSize = 34.sp)
