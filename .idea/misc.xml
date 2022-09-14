@@ -26,8 +26,14 @@
         <entry key="../../../layout/compose-model-1660514611281.xml" value="0.26309121621621623" />
         <entry key="../../../layout/compose-model-1660954534740.xml" value="0.22846283783783783" />
         <entry key="../../../layout/compose-model-1660997938287.xml" value="0.22846283783783783" />
+        <entry key="../../../layout/custom_preview.xml" value="0.3383152173913043" />
+        <entry key="app/src/main/res/drawable/corners_bg.xml" value="0.18" />
         <entry key="app/src/main/res/drawable/feelings_bg.xml" value="0.26" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/suggested_main_card.xml" value="0.26" />
+        <entry key="app/src/main/res/drawable/suggested_main_card_buttons.xml" value="0.26" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22053231939163498" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.22509057971014493" />
+        <entry key="app/src/main/res/layout/fragment_relax.xml" value="0.22509057971014493" />
       </map>
     </option>
   </component>
