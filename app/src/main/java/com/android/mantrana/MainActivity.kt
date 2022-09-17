@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.children
 import androidx.fragment.app.FragmentTransaction
 import com.android.mantrana.ui.Profile
+import com.android.mantrana.ui.RelaxActivityLayout
 import com.android.mantrana.ui.RelaxFragment
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
@@ -44,11 +45,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         relax.setOnClickListener{
-                val f = RelaxFragment()
-                val t: FragmentTransaction = supportFragmentManager.beginTransaction()
-                t.replace(R.id.relax_fragment, f).commit()
-
-
+         val intent_ = Intent(this, RelaxActivityLayout::class.java)
+            startActivity(intent_)
             }
 
         }

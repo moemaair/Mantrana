@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/fragment_relax"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_bg"
     tools:context=".ui.RelaxFragment">
@@ -11,9 +11,11 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
+        android:layout_width="411dp"
 
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="63dp"
         app:layout_constraintBottom_toTopOf="@+id/ll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,64 +44,76 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/curved_relax_card"
+        android:orientation="horizontal"
+
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/ll"
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:layout_marginBottom="379dp"
-            android:background="@drawable/curved_relax_card"
-            android:orientation="horizontal"
-            android:paddingVertical="30dp"
-            android:paddingHorizontal="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:gravity="start"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="2"
-                android:gravity="start"
-                android:orientation="vertical">
+                android:fontFamily="@font/alegreyasemibold"
+                android:lineHeight="43dp"
+                android:text="Relax Sounds"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/alegreyasemibold"
-                    android:lineHeight="43dp"
-                    android:text="Relax Sounds"
-                    android:textColor="@color/black"
-                    android:textSize="22dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreyaregular"
+                android:text="Sometimes the most productive thing you can do is relax."
+                android:textColor="@color/black"
+                android:textSize="17dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/alegreyaregular"
-                    android:text="Sometimes the most productive thing you can do is relax."
-                    android:textColor="@color/black"
-                    android:textSize="17dp" />
+            <Button
+                android:id="@+id/watchVideo1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/suggested_main_card_buttons"
+                android:elevation="70dp"
+                android:fontFamily="@font/alegreyaregular"
+                android:paddingHorizontal="50dp"
+                android:text="Play Now"
+                android:textSize="14dp" />
 
-                <Button
-                    android:id="@+id/watchVideo1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="7dp"
-                    android:background="@drawable/suggested_main_card_buttons"
-                    android:elevation="70dp"
-                    android:fontFamily="@font/alegreyaregular"
-                    android:paddingHorizontal="50dp"
-                    android:text="Play Now"
-                    android:textSize="14dp" />
-
-
-            </LinearLayout>
 
         </LinearLayout>
 
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRelax"
+        android:layout_width="409dp"
+        android:layout_height="591dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
