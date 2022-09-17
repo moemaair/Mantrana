@@ -5,32 +5,31 @@
     android:id="@+id/fragment_relax"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_bg"
     tools:context=".ui.RelaxFragment">
 
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="411dp"
-
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="63dp"
-        app:layout_constraintBottom_toTopOf="@+id/ll"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023">
+
 
         <ImageButton
             android:id="@+id/hamburger"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:background="@drawable/hamburger" />
 
         <ImageButton
             android:id="@+id/logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:background="@drawable/ic_baseline_local_florist_24" />
 
@@ -44,21 +43,35 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRelax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll"
+        app:layout_constraintVertical_bias="0.051" />
+
     <LinearLayout
         android:id="@+id/ll"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="148dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="1dp"
         android:background="@drawable/curved_relax_card"
         android:orientation="horizontal"
-
         android:paddingHorizontal="20dp"
         android:paddingVertical="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -74,7 +87,7 @@
                 android:fontFamily="@font/alegreyasemibold"
                 android:lineHeight="43dp"
                 android:text="Relax Sounds"
-                android:textColor="@color/black"
+                android:textColor="@android:color/holo_red_dark"
                 android:textSize="22dp" />
 
             <TextView
@@ -82,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/alegreyaregular"
                 android:text="Sometimes the most productive thing you can do is relax."
-                android:textColor="@color/black"
+                android:textColor="@android:color/background_dark"
                 android:textSize="17dp" />
 
             <Button
@@ -102,18 +115,14 @@
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewRelax"
-        android:layout_width="409dp"
-        android:layout_height="591dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="871dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

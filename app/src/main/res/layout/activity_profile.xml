@@ -7,42 +7,50 @@
     android:layout_height="match_parent"
     tools:context=".ui.Profile">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023">
+
 
         <ImageButton
             android:id="@+id/hamburger"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:background="@drawable/hamburger" />
 
         <ImageButton
             android:id="@+id/logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:background="@drawable/ic_baseline_local_florist_24" />
 
-        <ImageButton
-            android:id="@+id/profile"
+        <TextView
+            android:id="@+id/edit"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="end"
+            android:textSize="17dp"
+            android:clickable="true"
+            android:fontFamily="@font/alegreyaitalic"
             android:layout_marginEnd="9dp"
-            android:background="@drawable/ic_baseline_account_circle_24" />
+            android:gravity="center_vertical"
+            android:text="edit"/>
 
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
+        android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
         android:layout_marginBottom="341dp"
         android:gravity="center"
         android:orientation="vertical"
@@ -53,18 +61,18 @@
 
         <ImageView
             android:id="@+id/profilePic"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="114dp"
+            android:layout_height="95dp"
             android:src="@drawable/ic_baseline_account_circle_24" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/alegreyamedium"
+            android:fontFamily="@font/alegreyablack"
             android:text="Mohamed Ibrahim"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="40sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -73,7 +81,7 @@
             android:text="Mombasa, Kenya"
             android:textAlignment="center"
             android:textColor="@color/material_dynamic_secondary40"
-            android:textSize="26sp" />
+            android:textSize="17sp" />
     </LinearLayout>
 
 
