@@ -1,5 +1,6 @@
 package com.android.mantrana.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.mantrana.R
@@ -13,6 +14,10 @@ class Onboarding : AppCompatActivity() {
 
         SignUpNow.setOnClickListener{
             SignUpNow.snack("sign up page...")
+        }
+        loginWithEmail.setOnClickListener{
+            val intent = Intent(this, SignIn::class.java)
+            startActivity(intent)
         }
 
     }
