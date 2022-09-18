@@ -45,8 +45,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         relax.setOnClickListener{
-         val intent_ = Intent(this, RelaxActivityLayout::class.java)
-            startActivity(intent_)
+         val intent = Intent(this, RelaxActivityLayout::class.java)
+            startActivity(intent)
         }
 
     }

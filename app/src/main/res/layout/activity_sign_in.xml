@@ -68,7 +68,7 @@
                 android:fontFamily="@font/alegreyaregular"
                 android:hint="Password"
                 android:drawableEnd="@drawable/ic_baseline_password_24"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:paddingHorizontal="40dp" />
 
           <LinearLayout
