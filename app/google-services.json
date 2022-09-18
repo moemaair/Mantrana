@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "194156360777",
+    "project_id": "mantrana-app-3e780",
+    "storage_bucket": "mantrana-app-3e780.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194156360777:android:41269405795d75207ebb98",
+        "android_client_info": {
+          "package_name": "com.android.mantrana.ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194156360777-rrilfgln5t1gjtq8s10r03474ct8cdqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9GIA_nhCTEtCTRGTCB2epdiUfBgMO6Xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194156360777-rrilfgln5t1gjtq8s10r03474ct8cdqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

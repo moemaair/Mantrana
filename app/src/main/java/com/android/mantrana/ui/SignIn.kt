@@ -12,6 +12,10 @@ import kotlin.math.log
 
 class SignIn : AppCompatActivity() {
 
+   private lateinit var emailValue: String
+   private lateinit var passwordValue: String
+
+
     private val TAG: String? = SignIn::class.simpleName
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,9 +24,7 @@ class SignIn : AppCompatActivity() {
        loginBtn.setOnClickListener {
            checkCredencialCouroutine()
        }
-
     }
-
     fun checkCredencialCouroutine(){
         Log.i(TAG, "start")
         GlobalScope.launch(Dispatchers.IO) {
@@ -31,9 +33,9 @@ class SignIn : AppCompatActivity() {
         Log.i(TAG, "end")
     }
     suspend fun co() {
-        val email = emailEt.text.toString() // getting inputed email by user
-        val pass = passwardEt.text.toString() // getting inputed password by user
-        Log.i(TAG, "Email: $email \n Password: $pass" )
+        emailValue = emailEt.text.toString() // getting inputed email by user
+        passwordValue = passwardEt.text.toString() // getting inputed password by user
+        Log.i(TAG, "Email: $emailValue \n Password: $passwordValue" )
     }
 
 
