@@ -50,54 +50,58 @@
             android:textSize="25sp" />
     </LinearLayout>
 
-   `  <LinearLayout
-         android:id="@+id/linearLayout3"
-         android:layout_width="match_parent"
-         android:gravity="center"
-         android:layout_marginTop="150dp"
-         android:layout_height="wrap_content"
-         android:layout_below="@id/linearLayout2"
-         android:orientation="vertical">
-
-         <Button
-             android:id="@+id/loginWithEmail"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Login With Email"
-             android:background="@drawable/button_action_greenish"/>
+   `
 
         <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:paddingHorizontal="80dp"
-            android:orientation="horizontal">
+            android:layout_below="@id/linearLayout2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <TextView
+            <Button
+                android:id="@+id/loginWithEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don’t have an account?"
-                android:textAlignment="center"
-                android:textColor="@android:color/darker_gray"
-                android:fontFamily="@font/alegreyaregular"
-                android:textSize="19dp"/>
-            <TextView
-                android:id="@+id/SignUpNow"
-                android:layout_width="wrap_content"
+                android:background="@drawable/button_action_greenish"
+
+                android:text="Login With Email" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
-                android:layout_gravity="center"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:clickable="true"
-                android:paddingStart="5dp"
-                android:fontFamily="@font/alegreyaregular"
-                android:textSize="20dp"/>
-        </LinearLayout>
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alegreyaregular"
+                    android:text="Don’t have an account?"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/SignUpNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:fontFamily="@font/alegreyaregular"
+                    android:paddingStart="5dp"
+                    android:text="Sign Up"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </LinearLayout>
 
 
-
-     </LinearLayout>`
+        </LinearLayout>`
 
     </RelativeLayout>
 

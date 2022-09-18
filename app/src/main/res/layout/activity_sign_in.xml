@@ -49,6 +49,7 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/emailEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -60,6 +61,7 @@
                 android:paddingHorizontal="40dp" />
 
             <EditText
+                android:id="@+id/passwardEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -79,9 +81,9 @@
               <LinearLayout
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:layout_marginStart="30dp"
                   android:layout_marginTop="30dp"
-                  android:orientation="horizontal"
-                  android:paddingHorizontal="80dp">
+                  android:orientation="horizontal">
 
                   <TextView
                       android:layout_width="wrap_content"
@@ -106,7 +108,7 @@
                       android:textSize="20dp" />
               </LinearLayout>
               <Button
-                  android:id="@+id/loginWithEmail"
+                  android:id="@+id/loginBtn"
                   android:layout_width="wrap_content"
                   android:gravity="center"
                   android:layout_marginTop="30dp"
