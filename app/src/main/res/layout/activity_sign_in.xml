@@ -39,7 +39,7 @@
                 android:fontFamily="@font/alegreyaregular"
                 android:text="Sign in now to acces your excercises and saved music."
                 android:textColor="@android:color/darker_gray"
-                android:textSize="22dp" />
+                android:textSize="18dp" />
         </LinearLayout>
 
         <LinearLayout

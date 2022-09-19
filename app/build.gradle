@@ -3,9 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
-    id 'com.google.gms.google-services'
 }
-
+apply plugin: 'com.google.gms.google-services'
 configurations.all {
     resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
 }
@@ -108,3 +107,5 @@ dependencies {
         // When using the BoM, you don't specify versions in Firebase library dependencies
         implementation 'com.google.firebase:firebase-auth-ktx'
 }
+
+
