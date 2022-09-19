@@ -56,7 +56,7 @@ class SignUp : AppCompatActivity() {
                     )
                 ) {
                     registerNewEmail(
-                        EmailEtSignUp.getText().toString(),
+                        EmailEtSignUp.getText().toString().trim(),
                         PasswordEtSignUp.getText().toString()
                     )
                 } else {
