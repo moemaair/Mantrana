@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import com.android.mantrana.MainActivity
 import com.android.mantrana.R
 import com.google.android.gms.common.util.CollectionUtils
 import com.google.firebase.FirebaseApp
@@ -42,7 +43,6 @@ class SignUp : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         SignUpBtn.setOnClickListener {
             //check for null valued EditText fields
             if (!isEmpty(EmailEtSignUp.getText().toString()) && !isEmpty(
@@ -70,7 +70,6 @@ class SignUp : AppCompatActivity() {
 
         }
 
-
     }
 
     public override fun onStart() {
@@ -82,6 +81,10 @@ class SignUp : AppCompatActivity() {
         }
     }
 
+    private fun reload() {
+
+    }
+
     private fun registerNewEmail(email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
@@ -90,6 +93,8 @@ class SignUp : AppCompatActivity() {
                     Log.d(TAG, "createUserWithEmail:success")
                     val user = auth.currentUser
                     updateUI(user)
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
