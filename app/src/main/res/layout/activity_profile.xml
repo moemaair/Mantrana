@@ -34,16 +34,16 @@
             android:background="@drawable/ic_baseline_local_florist_24" />
 
         <TextView
-            android:id="@+id/edit"
+            android:id="@+id/edit_profile_topBar"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="end"
-            android:textSize="17dp"
+            android:textSize="17sp"
             android:clickable="true"
-            android:fontFamily="@font/alegreyaitalic"
+            android:fontFamily="@font/alegreyamedium"
             android:layout_marginEnd="9dp"
             android:gravity="center_vertical"
-            android:text="edit"/>
+            android:text="Edit"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -51,39 +51,223 @@
         android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="341dp"
+        android:background="@color/white"
         android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/user_profile_picture"
+            android:layout_width="114dp"
+            android:layout_height="65dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_account_circle_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+
+            <TextView
+                android:id="@+id/user_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreyamedium"
+                android:text="Mohamed Ibrahim"
+                android:textAlignment="center"
+                android:textColor="@color/main_bg"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreyamedium"
+                android:text="danilo@uscreen.tv"
+                android:textAlignment="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/greenish_profile_edit_button"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:drawablePadding="10dp"
+                android:elevation="10dp"
+                android:paddingHorizontal="30dp"
+                android:text="Edit profile"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginBottom="42dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-        <ImageView
-            android:id="@+id/profilePic"
-            android:layout_width="114dp"
-            android:layout_height="95dp"
-            android:src="@drawable/ic_baseline_account_circle_24" />
+        app:layout_constraintTop_toBottomOf="@+id/ll">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/alegreyablack"
-            android:text="Mohamed Ibrahim"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:letterSpacing="0.2"
+            android:padding="10dp"
+            android:text="CONTENT"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_outline_favorite_border_24"
+                android:drawableEnd="@drawable/back_arrow_greenish_color"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/alegreyamedium"
+                android:paddingVertical="14dp"
+                android:text="  Favorites"
+                android:textColor="@color/main_bg"
+                android:textCursorDrawable="@color/main_bg"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/takeMeHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/home_greenish_color"
+                android:drawableEnd="@drawable/back_arrow_greenish_color"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/alegreyamedium"
+                android:paddingVertical="14dp"
+                android:text=" Home"
+                android:textColor="@color/main_bg"
+                android:textCursorDrawable="@color/main_bg"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
 
         <TextView
+            android:id="@+id/otherSettiongs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/alegreyaregular"
-            android:text="Mombasa, Kenya"
-            android:textAlignment="center"
-            android:textColor="@color/material_dynamic_secondary40"
-            android:textSize="17sp" />
+            android:letterSpacing="0.2"
+            android:padding="10dp"
+            android:text="OTHER SETTINGS"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_outline_mode_edit_outline_24"
+                android:drawableEnd="@drawable/back_arrow_greenish_color"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/alegreyamedium"
+                android:paddingVertical="14sp"
+                android:text="  Write Us"
+                android:textColor="@color/main_bg"
+                android:textCursorDrawable="@color/main_bg"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_thumb_up_off_alt_24"
+                android:drawableEnd="@drawable/back_arrow_greenish_color"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/alegreyamedium"
+                android:paddingVertical="14sp"
+                android:text=" Rate Us"
+                android:textColor="@color/main_bg"
+                android:textCursorDrawable="@color/main_bg"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/signOutTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_logout_24"
+                android:drawableEnd="@drawable/back_arrow_greenish_color"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/alegreyamedium"
+                android:paddingVertical="14dp"
+                android:text=" Sign Out"
+                android:textColor="#C12323"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreyaextrabold"
+                android:text="MANTRANA"
+                android:textAlignment="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Copyright © 2022 Mantrana, All Rights Reserved"
+                android:textAlignment="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp"
+
+                />
+        </LinearLayout>
+
+
     </LinearLayout>
-
 
 
 

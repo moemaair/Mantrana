@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+android:id="@+id/ob"
     tools:context=".ui.Onboarding">
 
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/relativeLayoutOnboarding"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -26,6 +27,7 @@
 
 
         <ImageView
+            android:id="@+id/logo_onboarding"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:src="@mipmap/logo_big" />
@@ -44,13 +46,13 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/alegreyaitalic"
             android:paddingHorizontal="30dp"
-
+            android:id="@+id/text"
             android:text="Do meditation, stay focused, stay a healthy live"
             android:textAlignment="center"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
-   `
+
 
         <LinearLayout
             android:id="@+id/linearLayout3"

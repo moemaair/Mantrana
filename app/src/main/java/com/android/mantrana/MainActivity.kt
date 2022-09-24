@@ -1,68 +1,108 @@
 package com.android.mantrana
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
 import android.content.Intent
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.MediaController
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.android.mantrana.ui.Onboarding
+import androidx.core.graphics.drawable.toDrawable
 import com.android.mantrana.ui.Profile
 import com.android.mantrana.ui.RelaxFragment
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.watch_meditation_101.*
+import kotlinx.android.synthetic.main.watch_meditation_101.view.*
+import kotlinx.android.synthetic.main.watch_meditation_101.view.cancel_meditation_101_video
+import kotlinx.android.synthetic.main.watch_mindfullness_video.view.*
 
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("ResourceType")
+    lateinit var inflateWatchMediation101Layount: View
+    lateinit var inflateWatchMindfullnessVideoLayount: View
+    private val TAG: String? = MainActivity::class.simpleName
+    lateinit var viewGroup: ViewGroup
+    lateinit var builder: AlertDialog.Builder
+
+    //val videoUrl = "https://www.youtube.com/watch?v=o-kMJBWk9E0"
+
+    @SuppressLint("ResourceType", "SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //fragments
-        val bundle = Bundle()
-        val fragmentRelax = RelaxFragment()
-        fragmentRelax.arguments = bundle
+        viewGroup = findViewById<ViewGroup>(android.R.id.content)
+        inflateWatchMediation101Layount = LayoutInflater
+            .from(this)
+            .inflate(R.layout.watch_meditation_101, viewGroup, false)
+
+        inflateWatchMindfullnessVideoLayount = LayoutInflater
+            .from(this)
+            .inflate(R.layout.watch_mindfullness_video,viewGroup,false)
 
 
-        hamburger.setOnClickListener{
-            hamburger.snack("Your message"  )
+        hamburger.setOnClickListener {
+            hamburger.snack("Your message")
         }
         val profile = findViewById<ImageButton>(R.id.profile)
-        profile.setOnClickListener{
-            val intent = Intent(this,Profile::class.java)
+        profile.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         }
-//        relax.setOnClickListener{
-//         val intent = Intent(this, RelaxActivityLayout::class.java)
-//            startActivity(intent)
-//        }
-        hamburger.setOnClickListener{
-            val alert = AlertDialog.Builder(this)
-            alert.setTitle("Do you want to log out?")
-            alert.setIcon(R.mipmap.logo_big)
 
-            alert.setPositiveButton("Ok") { dialog, whichButton ->
-                //Your action here
-                FirebaseAuth.getInstance().signOut()
-                val intent = Intent(this, Onboarding::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
-                finish()
 
-            }
-
-            alert.setNegativeButton("Cancel") { dialog, whichButton ->
-                dialog.cancel()
-
-            }
-
-            alert.show()
+        watch_meditation_101.setOnClickListener {
+            alertDialogMeditation101Video()
         }
 
+
+        watch_mindfullness_video.setOnClickListener {
+            alertDialogMindfullnessVideo()
+        }
+
+
+
+    }
+
+
+
+    private fun alertDialogMeditation101Video(){
+        builder = AlertDialog.Builder(this)
+        builder.setView(inflateWatchMediation101Layount)
+
+        val mediaController = MediaController(this)
+        inflateWatchMediation101Layount.watch_meditation_101_videoView.setMediaController(mediaController)
+        mediaController.setAnchorView( inflateWatchMediation101Layount.watch_meditation_101_videoView)
+        val path = "android.resource://" + packageName + "/" + R.raw.meditation_101_video
+        inflateWatchMediation101Layount.watch_meditation_101_videoView.setVideoURI(Uri.parse(path))
+        inflateWatchMediation101Layount.watch_meditation_101_videoView.requestFocus()
+        inflateWatchMediation101Layount.watch_meditation_101_videoView.start()
+        val alertDialog1 = builder.create()
+
+        alertDialog1.show()
+    }
+
+    private fun alertDialogMindfullnessVideo() {
+        val mindfullness_alert  = AlertDialog.Builder(this)
+        mindfullness_alert.setView(inflateWatchMindfullnessVideoLayount)
+
+        val mediaController = MediaController(this)
+        inflateWatchMindfullnessVideoLayount.watch_mindfullness_video_videoView.setMediaController(mediaController)
+        mediaController.setAnchorView( inflateWatchMindfullnessVideoLayount.watch_mindfullness_video_videoView)
+        val path = "android.resource://" + packageName + "/" + R.raw.mindfullness_video
+        inflateWatchMindfullnessVideoLayount.watch_mindfullness_video_videoView.setVideoURI(Uri.parse(path))
+        inflateWatchMindfullnessVideoLayount.watch_mindfullness_video_videoView.requestFocus()
+        inflateWatchMindfullnessVideoLayount.watch_mindfullness_video_videoView.start()
+        val alertDialog2 = mindfullness_alert.create()
+
+        alertDialog2.show()
     }
 
 
@@ -70,4 +110,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
 }
+
+

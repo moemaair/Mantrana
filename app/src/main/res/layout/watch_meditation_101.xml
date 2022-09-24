@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <VideoView
+            android:id="@+id/watch_meditation_101_videoView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="end" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+    </LinearLayout>
+</LinearLayout>
+<ImageButton
+    android:layout_gravity="end"
+    android:id="@+id/cancel_meditation_101_video"
+    android:layout_width="wrap_content"
+    android:layout_height="35dp"
+    android:backgroundTint="@android:color/transparent"
+    android:src="@drawable/ic_baseline_cancel_24" />
+</FrameLayout>

@@ -252,7 +252,7 @@
                     android:textSize="17dp" />
 
                 <Button
-                    android:id="@+id/watchVideo1"
+                    android:id="@+id/watch_meditation_101"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="7dp"
@@ -311,7 +311,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/alegreyasemibold"
                     android:lineHeight="43dp"
-                    android:text="Cardio Meditation"
+                    android:text="Mindfulness Meditation"
                     android:textColor="@color/black"
                     android:textSize="22dp" />
 
@@ -319,12 +319,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/alegreyaregular"
-                    android:text="Basics of Yoga for Beginners or Experienced Professionals"
+                    android:text="Ability to know what's happening in your head at any given moment without getting carried"
                     android:textColor="@color/black"
                     android:textSize="17dp" />
 
                 <Button
-                    android:id="@+id/watchVideo2"
+                    android:id="@+id/watch_mindfullness_video"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="7dp"
